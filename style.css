@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+    background-color: #000000; /* Deep space black */
+}
+
+canvas {
+    display: block; /* Removes the default inline gap */
+}
+
+#info-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 20px;
+    padding-bottom: 0px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none; /* So it doesn't interfere with raycasting */
+    font-size: 15px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px; /* Adds a bit of spacing for that techy look */
+
+}
+
+#info-panel h2, #info-panel p {
+    margin: 5px;
+}
+
+.gradient-text {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  
+  /* 2. Clip the background to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* 3. Make the actual text color transparent so the background shows through */
+  color: transparent;
+}
+
+.gradient-text.sun {
+  background-image: linear-gradient(45deg, #ffcc00, #ff5500);
+}
+
+.gradient-text.earth {
+  background-image: linear-gradient(45deg, #54CBFF, #2233ff);
+}
+
+.hidden {
+    display: none;
+}
